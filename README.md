@@ -1,3 +1,3 @@
-# Wacca_Translate_Update
+# Wacca Translate Update
 For updating translation project to newer versions
 WIP
