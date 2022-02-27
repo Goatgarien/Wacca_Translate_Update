@@ -55,6 +55,9 @@ void main() {
 								if (textValue["Value"].is_string()) {
 									inputMap[dataTable["Name"]].second = textValue["Value"];
 								}
+								if (inputMap[dataTable["Name"]].second == "") {
+									changes << "Not Translated: " << dataTable["Name"] << endl;
+								}
 							}
 						}
 					}
@@ -77,7 +80,7 @@ void main() {
 						if (textValue.is_object()) {
 							if (textValue["Name"] == "JapaneseMessage(0)") {
 								if (inputMap[dataTable["Name"]].first != textValue["Value"]) {
-									changes << dataTable["Name"] << endl;
+									changes << "Changed: " << dataTable["Name"] << endl;
 								}
 							}
 							if (textValue["Name"]  == "EnglishMessageUSA(0)") {
