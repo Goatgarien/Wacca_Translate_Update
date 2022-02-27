@@ -21,4 +21,4 @@ void main() {
 
 	std::ofstream o("pretty.json");
 	o << std::setw(4) << inputJSON << std::endl;
-}
+} 
