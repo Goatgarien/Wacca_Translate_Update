@@ -38,20 +38,20 @@ void main() {
 		{
 			for (const auto& dataTable : exports["Table"]["Data"])
 			{
-				cout << dataTable["Name"] << endl;
+				//cout << dataTable["Name"] << endl;
 				if (dataTable.find("Value") != dataTable.end())
 				{
 					for (const auto& textValue : dataTable["Value"])
 					{
 						if (textValue.is_object()) {
 							if (textValue["Name"] == "JapaneseMessage(0)") {
-								cout << textValue["Value"] << endl;
+								//cout << textValue["Value"] << endl;
 								if (textValue["Value"].is_string()) {
 									inputMap[dataTable["Name"]].first = textValue["Value"];
 								}
 							}
 							if (textValue["Name"] == "EnglishMessageUSA(0)") {
-								cout << textValue["Value"] << endl;
+								//cout << textValue["Value"] << endl;
 								if (textValue["Value"].is_string()) {
 									inputMap[dataTable["Name"]].second = textValue["Value"];
 								}
@@ -84,7 +84,7 @@ void main() {
 								if (inputMap[dataTable["Name"]].second != "") {
 									textValue["Value"] = inputMap[dataTable["Name"]].second;
 								}
-								cout << textValue["Value"] << endl;
+								//cout << textValue["Value"] << endl;
 							}
 						}
 					}
